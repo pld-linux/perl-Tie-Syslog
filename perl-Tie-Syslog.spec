@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Tie
 %define	pnam	Syslog
-Summary:	Tie-Syslog perl module
-Summary(pl):	Modu³ perla Tie-Syslog
+Summary:	Tie::Syslog perl module
+Summary(pl):	Modu³ perla Tie::Syslog
 Name:		perl-Tie-Syslog
 Version:	1.07
 Release:	3
@@ -15,10 +15,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Tie-Syslog perl module.
+Tie::Syslog perl module.
 
 %description -l pl
-Modu³ perla Tie-Syslog.
+Modu³ perla Tie::Syslog.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
