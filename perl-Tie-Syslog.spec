@@ -2,8 +2,8 @@
 Summary:	Tie-Syslog perl module
 Summary(pl):	Modu³ perla Tie-Syslog
 Name:		perl-Tie-Syslog
-Version:	1.04
-Release:	2
+Version:	1.07
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
