@@ -5,12 +5,12 @@ Summary:	Tie::Syslog - Tie a filehandle to Syslog
 Summary(pl):	Modu³ Tie::Syslog - wi±¿±cy uchwyt pliku z logiem systemowym
 Name:		perl-Tie-Syslog
 Version:	1.07
-Release:	5
+Release:	6
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -34,7 +34,8 @@ informaji do loga systemowego polega na module Sys::Syslog.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %install
@@ -48,5 +49,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitelib}/Tie/Syslog.pm
+%{perl_vendorlib}/Tie/Syslog.pm
 %{_mandir}/man3/*
