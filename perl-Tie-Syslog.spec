@@ -1,8 +1,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Tie
 %define	pnam	Syslog
-Summary:	Tie::Syslog perl module
-Summary(pl):	Modu³ perla Tie::Syslog
+Summary:	Tie::Syslog - Tie a filehandle to Syslog.
 Name:		perl-Tie-Syslog
 Version:	1.07
 Release:	3
@@ -15,10 +14,12 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Tie::Syslog perl module.
-
-%description -l pl
-Modu³ perla Tie::Syslog.
+This module allows you to tie a filehandle (output only) to syslog. This
+becomes useful in general when you want to capture any activity that
+happens on STDERR and see that it is syslogged for later perusal. You can
+also create an arbitrary filehandle, say LOG, and send stuff to syslog
+by printing to this filehandle. This module depends on the Sys::Syslog
+module to actually get info to syslog.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
