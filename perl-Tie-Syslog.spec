@@ -36,7 +36,7 @@ informaji do loga systemowego polega na module Sys::Syslog.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %install
