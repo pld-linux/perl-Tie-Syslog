@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Tie
 %define	pnam	Syslog
-Summary:	Tie::Syslog - Tie a filehandle to Syslog
-Summary(pl):	Modu³ Tie::Syslog - wi±¿±cy uchwyt pliku z logiem systemowym
+Summary:	Tie::Syslog Perl module - tie a filehandle to Syslog
+Summary(pl):	Modu³ Perla Tie::Syslog - zwi±zanie uchwytu pliku z logiem systemowym
 Name:		perl-Tie-Syslog
 Version:	1.07
 Release:	6
