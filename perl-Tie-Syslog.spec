@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Tie
 %define	pnam	Syslog
-%include	/usr/lib/rpm/macros.perl
 Summary:	Tie-Syslog perl module
 Summary(pl):	Modu³ perla Tie-Syslog
 Name:		perl-Tie-Syslog
 Version:	1.07
-Release:	2
-
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -22,7 +21,7 @@ Tie-Syslog perl module.
 Modu³ perla Tie-Syslog.
 
 %prep
-%setup -q -n Tie-Syslog-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL
