@@ -1,25 +1,34 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Tie
 %define	pnam	Syslog
-Summary:	Tie::Syslog - Tie a filehandle to Syslog.
+Summary:	Tie::Syslog - Tie a filehandle to Syslog
+Summary(pl):	Modu³ Tie::Syslog - wi±¿±cy uchwyt pliku z logiem systemowym
 Name:		perl-Tie-Syslog
 Version:	1.07
-Release:	4
+Release:	5
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
+BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This module allows you to tie a filehandle (output only) to syslog. This
-becomes useful in general when you want to capture any activity that
-happens on STDERR and see that it is syslogged for later perusal. You can
-also create an arbitrary filehandle, say LOG, and send stuff to syslog
-by printing to this filehandle. This module depends on the Sys::Syslog
-module to actually get info to syslog.
+This module allows you to tie a filehandle (output only) to syslog.
+This becomes useful in general when you want to capture any activity
+that happens on STDERR and see that it is syslogged for later perusal.
+You can also create an arbitrary filehandle, say LOG, and send stuff
+to syslog by printing to this filehandle. This module depends on the
+Sys::Syslog module to actually get info to syslog.
+
+%description -l pl
+Ten modu³ pozwala powi±zaæ uchwyt pliku (tylko wyj¶ciowy) z logiem
+systemowym. Jest to przydatne je¶li potrzeba wychwyciæ ka¿d± aktywno¶æ
+na standardowym wyj¶ciu b³êdu i zachowaæ do pó¼niejszej analizy. Mo¿na
+tak¿e utworzyæ dowolny uchwyt pliku, np. LOG, i wysy³aæ komunikaty do
+sysloga poprzez pisanie do tego uchwytu. Ten modu³ przy wysy³aniu
+informaji do loga systemowego polega na module Sys::Syslog.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -33,13 +42,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf Changes README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Changes README
 %{perl_sitelib}/Tie/Syslog.pm
 %{_mandir}/man3/*
