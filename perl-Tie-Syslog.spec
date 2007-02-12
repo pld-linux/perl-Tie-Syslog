@@ -7,7 +7,7 @@
 %define		pdir	Tie
 %define		pnam	Syslog
 Summary:	Tie::Syslog Perl module - tie a filehandle to Syslog
-Summary(pl):	Modu³ Perla Tie::Syslog - zwi±zanie uchwytu pliku z logiem systemowym
+Summary(pl.UTF-8):   ModuÅ‚ Perla Tie::Syslog - zwiÄ…zanie uchwytu pliku z logiem systemowym
 Name:		perl-Tie-Syslog
 Version:	1.07
 Release:	6
@@ -29,12 +29,12 @@ You can also create an arbitrary filehandle, say LOG, and send stuff
 to syslog by printing to this filehandle. This module depends on the
 Sys::Syslog module to actually get info to syslog.
 
-%description -l pl
-Ten modu³ pozwala powi±zaæ uchwyt pliku (tylko wyj¶ciowy) z logiem
-systemowym. Jest to przydatne je¶li potrzeba wychwyciæ ka¿d± aktywno¶æ
-na standardowym wyj¶ciu b³êdu i zachowaæ do pó¼niejszej analizy. Mo¿na
-tak¿e utworzyæ dowolny uchwyt pliku, np. LOG, i wysy³aæ komunikaty do
-sysloga poprzez pisanie do tego uchwytu. Ten modu³ przy wysy³aniu
+%description -l pl.UTF-8
+Ten moduÅ‚ pozwala powiÄ…zaÄ‡ uchwyt pliku (tylko wyjÅ›ciowy) z logiem
+systemowym. Jest to przydatne jeÅ›li potrzeba wychwyciÄ‡ kaÅ¼dÄ… aktywnoÅ›Ä‡
+na standardowym wyjÅ›ciu bÅ‚Ä™du i zachowaÄ‡ do pÃ³Åºniejszej analizy. MoÅ¼na
+takÅ¼e utworzyÄ‡ dowolny uchwyt pliku, np. LOG, i wysyÅ‚aÄ‡ komunikaty do
+sysloga poprzez pisanie do tego uchwytu. Ten moduÅ‚ przy wysyÅ‚aniu
 informaji do loga systemowego polega na module Sys::Syslog.
 
 %prep
