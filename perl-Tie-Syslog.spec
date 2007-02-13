@@ -7,7 +7,7 @@
 %define		pdir	Tie
 %define		pnam	Syslog
 Summary:	Tie::Syslog Perl module - tie a filehandle to Syslog
-Summary(pl.UTF-8):   Moduł Perla Tie::Syslog - związanie uchwytu pliku z logiem systemowym
+Summary(pl.UTF-8):	Moduł Perla Tie::Syslog - związanie uchwytu pliku z logiem systemowym
 Name:		perl-Tie-Syslog
 Version:	1.07
 Release:	6
