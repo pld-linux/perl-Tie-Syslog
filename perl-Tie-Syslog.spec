@@ -2,10 +2,10 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test"
 			# require resolvable hostname and syslog access
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Tie
 %define		pnam	Syslog
+%include	/usr/lib/rpm/macros.perl
 Summary:	Tie::Syslog Perl module - tie a filehandle to Syslog
 Summary(pl.UTF-8):	Moduł Perla Tie::Syslog - związanie uchwytu pliku z logiem systemowym
 Name:		perl-Tie-Syslog
@@ -16,6 +16,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	8afc88e3ffe0bd64fdcde58a827a23dc
+URL:		http://search.cpan.org/dist/Tie-Syslog/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
